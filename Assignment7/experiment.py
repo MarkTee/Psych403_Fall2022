@@ -54,9 +54,9 @@ text_after_image = "wait for next image"
 start_message = "Beginning experiment"
 block_start_message = "Beginning new block"
 
-# trial_loop_timer = core.CountdownTimer() # WAIT-Q4 #
-# block_timer = core.Clock() # WAIT-Q4 #
-# trial_timer = core.Clock() # WAIT-Q4 #
+# trial_loop_timer = core.CountdownTimer() # CLOCK-Q4 #
+# block_timer = core.Clock() # CLOCK-Q4 #
+# trial_timer = core.Clock() # CLOCK-Q4 #
 
 #=====================
 #PREPARE CONDITION LISTS
@@ -98,8 +98,8 @@ stimulus_property_order = []  # list for recording the order of stimulus propert
 #BLOCK SEQUENCE
 #=====================
 for block_i in range(n_blocks):
-    # block_timer.reset() # WAIT-Q4 #
-    # block_start_time = 0 # WAIT-Q4 #
+    # block_timer.reset() # CLOCK-Q4 #
+    # block_start_time = 0 # CLOCK-Q4 #
 
     #-present block start message
     random.shuffle(conditions)
@@ -109,8 +109,8 @@ for block_i in range(n_blocks):
     #TRIAL SEQUENCE
     #=====================
     for trial_i in range(n_trials):
-        # trial_timer.reset() # WAIT-Q4 #
-        # trial_start_time = 0 # WAIT-Q4 #
+        # trial_timer.reset() # CLOCK-Q4 #
+        # trial_start_time = 0 # CLOCK-Q4 #
 
         trial_image = visual.ImageStim(win, image=conditions[trial_i], units='pix', size=400)
         #-set stimuli and stimulus properties for the current trial
@@ -121,9 +121,9 @@ for block_i in range(n_blocks):
         #=====================
         for frame_n in range(image_frames):
 
-        # trial_loop_timer.reset() # WAIT-Q4 #
-        # trial_loop_timer.add(2) # WAIT-Q4 #
-        # while trial_loop_timer > 0: # WAIT-Q4 #
+        # trial_loop_timer.reset() # CLOCK-Q4 #
+        # trial_loop_timer.add(2) # CLOCK-Q4 #
+        # while trial_loop_timer > 0: # CLOCK-Q4 #
             trial_image.draw()
             win.flip()
 
@@ -137,11 +137,11 @@ for block_i in range(n_blocks):
         #-collect subject response time for that trial
         #-collect accuracy for that trial
 
-        # trial_end_time = trial_timer.getTime() # WAIT-Q4 #
+        # trial_end_time = trial_timer.getTime() # CLOCK-Q4 #
 
     print('Overall, %i frames were dropped.' % win.nDroppedFrames)
 
-    # block_end_time = block_timer.getTime() # WAIT-Q4 #
+    # block_end_time = block_timer.getTime() # CLOCK-Q4 #
 
 #======================
 # END OF EXPERIMENT

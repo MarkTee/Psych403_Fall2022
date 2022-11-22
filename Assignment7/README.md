@@ -212,7 +212,7 @@ Using core.wait with a countdown timer isn't that precise either (again, there i
 - 2.000957665964961 seconds
 
 
-**4.** Please see [experiment.py](experiment.py). The next question has us comment out the relevant lines so I added "# WAIT-Q4 #" to the end of each relevant line.
+**4.** Please see [experiment.py](experiment.py). The next question has us comment out the relevant lines so I added "# CLOCK-Q4 #" to the end of each relevant line.
 
 
 
