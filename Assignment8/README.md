@@ -20,6 +20,10 @@ Any keys that have been pressed before event.ClearEvents() is called will be flu
 Only the time of the last trial's keypress will be printed. 
 
 
+## Psychtoolbox keypress exercises
+N/A
+
+
 ## Recording data exercises
 
 **1. and 2.** Please see [Assignment8/exercises.py](Assignment8/exercises.py).

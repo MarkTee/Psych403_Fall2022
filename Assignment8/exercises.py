@@ -1,5 +1,5 @@
 import csv
-import json as json
+import json
 
 from psychopy import core, event, visual, monitors
 import numpy as np
@@ -11,7 +11,7 @@ win = visual.Window(monitor=mon, size=(400,400), color=[-1,-1,-1])
 
 #blocks, trials, stims, and clocks
 nBlocks=1
-nTrials=1
+nTrials=2
 my_text=visual.TextStim(win)
 rt_clock = core.Clock()  # create a response time clock
 cd_timer = core.CountdownTimer() #add countdown timer
@@ -50,6 +50,7 @@ for block in range(nBlocks):
             win.flip()
 
             #collect keypresses after first flip
+            sub_resp = 0
             keys = event.getKeys(keyList=['1','2','3','4','escape'])
 
             if keys:
@@ -80,13 +81,12 @@ for block in range(nBlocks):
         #       'subject accuracy=',sub_acc)
 
         # for csv exercises:
-        results.append({'block': block, 'trial': trial,
-                        'problem': prob,
+        results.append({'block': block, 'trial': trial, 'problem': prob,
                        'sub_resp': sub_resp, 'resp_time': resp_time,
                        'sub_acc': sub_acc, 'corr_resp': corr_resp})
 
-with open('saved_csv.csv', 'w') as f:
-    # # save csv
+# save csv
+# with open('saved_csv.csv', 'w') as f:
     # fieldnames = ['block', 'trial', 'problem','corr_resp','sub_resp','sub_acc', 'resp_time']
     # data_writer = csv.DictWriter(f, fieldnames=fieldnames)
     # data_writer.writeheader()
@@ -94,8 +94,8 @@ with open('saved_csv.csv', 'w') as f:
     #     print(result)
     #     data_writer.writerow(result)
 
-    # save json
-    with open('saved_json.json', 'w') as f:
-        json.dump(results, f)
+# save json
+with open('saved_json.json', 'w') as f:
+    f.write(json.dumps(results))
 
 win.close()
