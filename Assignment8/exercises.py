@@ -10,8 +10,8 @@ mon.setSizePix([1920, 1080])
 win = visual.Window(monitor=mon, size=(400,400), color=[-1,-1,-1])
 
 #blocks, trials, stims, and clocks
-nBlocks=1
-nTrials=2
+nBlocks=2
+nTrials=4
 my_text=visual.TextStim(win)
 rt_clock = core.Clock()  # create a response time clock
 cd_timer = core.CountdownTimer() #add countdown timer
