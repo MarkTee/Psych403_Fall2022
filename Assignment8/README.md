@@ -26,17 +26,19 @@ N/A
 
 ## Recording data exercises
 
-**1. and 2.** Please see [Assignment8/exercises.py](Assignment8/exercises.py).
+**1. and 2.** Please see [exercises.py](exercises.py).
 
 
 ## Save csv exercises
 
-**1.** Please see [Assignment8/exercises.py](Assignment8/exercises.py).
+**1.** Please see [exercises.py](exercises.py).
 
 
 ## Save JSON exercises
 
-**1.** Please see [Assignment8/exercises.py](Assignment8/exercises.py).
+**1.** Please see [exercises.py](exercises.py).
 
 
 ## Read JSON exercises
+
+**1. and 2. and 3.** Please see [read_and_analysis.py](read_and_analysis.py).
